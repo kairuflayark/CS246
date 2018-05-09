@@ -1,6 +1,9 @@
 package macbeth;
 
+import com.google.gson.Gson;
+
 import java.util.*;
+
 
 public class Main {
 
@@ -49,6 +52,20 @@ public class Main {
 			System.out.println(value.toString());
 		}
 
+		User user1 = new User("bob","555-1234","bob@gmail.com");
+		System.out.println(user1.toString());
+
+		Gson gson = new Gson();
+		String text = gson.toJson(user1);
+		System.out.println(text);
+
+
+
+
+
+		User user2;
+		user2 = gson.fromJson(text, User.class);
+		System.out.println(user2.toString());
 
 
 
