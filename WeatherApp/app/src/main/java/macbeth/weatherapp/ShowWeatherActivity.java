@@ -32,7 +32,9 @@ public class ShowWeatherActivity extends Activity {
         ((TextView) findViewById(R.id.requestedZip)).setText("Weather for " + zip);
 
         // Get weather data in the background
-        weatherLoaderTask(zip);
+        //weatherLoaderTask(zip);
+        WeatherLoaderTask task = new WeatherLoaderTask(this);
+        task.execute(zip);
     }
 
     private void weatherLoaderTask(String zip) {

@@ -26,7 +26,7 @@ public class WeatherLoader {
             // Read all data from the website into a single string
             String line = "";
             String allLines = "";
-            do {
+           do {
                 line = reader.readLine();
                 if (line != null) {
                     allLines += line;
